@@ -9,11 +9,11 @@ namespace Xadrez_console.Tabuleiro
         public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }
         public int QteMovimento { get; protected set; }
-        public Tabuleiro Tab { get; protected set; }
+        public Campo Tab { get; protected set; }
 
-        public Peca(Posicao posicao, Cor cor, Tabuleiro tab)
+        public Peca(Campo tab, Cor cor)
         {
-            Posicao = posicao;
+            Posicao = null;
             Cor = cor;
             Tab = tab;
             QteMovimento = 0;
