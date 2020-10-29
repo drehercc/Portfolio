@@ -16,7 +16,7 @@ namespace Xadrez_console.Xadrez
         {
             Tab = new Campo(8, 8);
             Turno = 1;
-            JogadorAtual = Cor.Preto;
+            JogadorAtual = Cor.Branco;
             Terminada = false;
             ColocarPecas();
         }
@@ -33,6 +33,7 @@ namespace Xadrez_console.Xadrez
         {
             Tab.ColocarPeca(new Torre(Tab, Cor.Branco), new PosicaoXadrez('c', 1).toPosicao());
             Tab.ColocarPeca(new Torre(Tab, Cor.Branco), new PosicaoXadrez('c', 2).toPosicao());
+            Tab.ColocarPeca(new Torre(Tab, Cor.Preto), new PosicaoXadrez('c', 8).toPosicao());
         }
     }
 }

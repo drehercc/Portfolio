@@ -8,8 +8,6 @@ namespace Xadrez_console
     {
         static void Main(string[] args)
         {
-            Campo tabuleiro = new Campo(8, 8);
-
             try
             {
                 PartidaDeXadrez partida = new PartidaDeXadrez();
