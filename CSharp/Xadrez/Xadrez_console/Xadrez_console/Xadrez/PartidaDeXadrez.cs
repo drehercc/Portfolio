@@ -66,10 +66,11 @@ namespace Xadrez_console.Xadrez
                     {
                         if (mat[i, j])
                         {
+                            Posicao origem = x.Posicao;
                             Posicao destino = new Posicao(i, j);
-                            Peca pecaCapturada = ExecutaMovimento(x.Posicao, destino);
+                            Peca pecaCapturada = ExecutaMovimento(origem, destino);
                             bool TesteXeque = EstaEmXeque(cor);
-                            DesfazMovimento(x.Posicao, destino, pecaCapturada);
+                            DesfazMovimento(origem, destino, pecaCapturada);
                             if (!TesteXeque)
                             {
                                 return false;

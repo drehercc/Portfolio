@@ -12,11 +12,19 @@ namespace Xadrez_console
             ImprimirTabuleiro(partida.Tab);
             Console.WriteLine();
             ImprimirPecasCapturadas(partida);
-            Console.WriteLine("Turno: "+partida.Turno);
-            Console.WriteLine("Aguardando jogador: "+ partida.JogadorAtual);
-            if (partida.Xeque)
+            Console.WriteLine("Turno: " + partida.Turno);
+            if (!partida.Terminada)
             {
-                Console.WriteLine("Xeque!");
+                Console.WriteLine("Aguardando jogador: " + partida.JogadorAtual);
+                if (partida.Xeque)
+                {
+                    Console.WriteLine("Xeque!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("XEQUEMATE!");
+                Console.WriteLine("Vencedor: "+partida.JogadorAtual);
             }
         }
         public static void ImprimirPecasCapturadas(PartidaDeXadrez partida)
@@ -38,7 +46,7 @@ namespace Xadrez_console
         public static void ImprimirConjunto(HashSet<Peca> conjunto)
         {
             Console.Write("[");
-            foreach(Peca x in conjunto)
+            foreach (Peca x in conjunto)
             {
                 Console.Write(x + " ");
             }
