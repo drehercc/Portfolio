@@ -41,6 +41,11 @@ namespace Xadrez_console
                         Console.WriteLine(e.Message);
                         Console.ReadLine();
                     }
+                    catch(Exception e)
+                    {
+                        Console.WriteLine("Unexpected error: "+ e.Message);
+                        Console.ReadLine();
+                    }
                 }
                 Console.Clear();
                 Tela.ImprimirPartida(partida);

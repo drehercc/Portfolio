@@ -28,22 +28,22 @@ namespace Xadrez_console.Xadrez
 
             if(Cor == Cor.Branco)
             {
-                pos.DefinirValores(pos.Linha - 1, pos.Coluna);
+                pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna);
                 if(Tab.PosicaoValida(pos) && Livre(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
-                pos.DefinirValores(pos.Linha - 2, pos.Coluna);
+                pos.DefinirValores(Posicao.Linha - 2, Posicao.Coluna);
                 if (Tab.PosicaoValida(pos) && Livre(pos) && QteMovimento==0)
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
-                pos.DefinirValores(pos.Linha - 1, pos.Coluna - 1);
+                pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna - 1);
                 if (Tab.PosicaoValida(pos) && ExisteInimigo(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
-                pos.DefinirValores(pos.Linha - 1, pos.Coluna + 1);
+                pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna + 1);
                 if (Tab.PosicaoValida(pos) && ExisteInimigo(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
@@ -51,22 +51,22 @@ namespace Xadrez_console.Xadrez
             }
             else
             {
-                pos.DefinirValores(pos.Linha + 1, pos.Coluna);
+                pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna);
                 if (Tab.PosicaoValida(pos) && Livre(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
-                pos.DefinirValores(pos.Linha + 2, pos.Coluna);
+                pos.DefinirValores(Posicao.Linha + 2, Posicao.Coluna);
                 if (Tab.PosicaoValida(pos) && Livre(pos) && QteMovimento == 0)
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
-                pos.DefinirValores(pos.Linha + 1, pos.Coluna - 1);
+                pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna - 1);
                 if (Tab.PosicaoValida(pos) && ExisteInimigo(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
                 }
-                pos.DefinirValores(pos.Linha + 1, pos.Coluna + 1);
+                pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna + 1);
                 if (Tab.PosicaoValida(pos) && ExisteInimigo(pos))
                 {
                     mat[pos.Linha, pos.Coluna] = true;
